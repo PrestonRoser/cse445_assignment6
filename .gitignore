@@ -422,3 +422,20 @@ FodyWeavers.xsd
 .env/
 .env*
 *.env
+
+# Ensure build output is ignored across all projects
+**/bin/
+**/obj/
+
+# Ensure NuGet packages are not uploaded
+packages/
+**/packages/
+
+# Ignore publish/deployment artifacts
+publish/
+*_compiled/
+*.zip
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
