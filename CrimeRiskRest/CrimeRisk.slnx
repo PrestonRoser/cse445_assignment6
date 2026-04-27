@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../CrimeRiskWeb/CrimeRiskWeb.csproj" Id="cdf92a87-7e97-45b4-aa38-9962c67bdc66" />
+  <Project Path="CrimeRiskRest.csproj" Id="62bf5d54-d9a1-4a94-996c-b5c3f928cc9c">
+    <BuildType Project="Release" />
+  </Project>
+</Solution>
