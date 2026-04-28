@@ -319,6 +319,7 @@
     </Compile>
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Services\XmlUserStore.cs" />
+    <Compile Include="Services\HashUtility.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

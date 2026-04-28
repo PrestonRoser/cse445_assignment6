@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Security.Cryptography;
-using System.Text;
 using System.Web.UI;
 using CrimeRiskWeb.Services;
 
@@ -21,21 +19,11 @@ namespace WebApplication1_Assignment5
                 return;
             }
 
-            // email is optional here — pass empty string until a field is added
-            bool success = UserService.RegisterUser(username, password, "Member", "", Sha256Hash);
+            bool success = UserService.RegisterUser(username, password, "Member", "");
 
             Output.Text = success
                 ? "Successfully registered member"
                 : "Couldn't register member, member with this username already exists";
-        }
-
-        private static string Sha256Hash(string input)
-        {
-            using (var sha = SHA256.Create())
-            {
-                byte[] bytes = sha.ComputeHash(Encoding.UTF8.GetBytes(input));
-                return BitConverter.ToString(bytes).Replace("-", "").ToLower();
-            }
         }
     }
 }

@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Security.Cryptography;
-using System.Text;
-using System.Web;
 using System.Web.Security;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using CrimeRiskWeb.Services;
 
 namespace WebApplication1_Assignment5
@@ -24,10 +20,7 @@ namespace WebApplication1_Assignment5
                 return;
             }
 
-            // Authenticate using the service layer
-            bool isValid = UserService.AuthenticateUser(username, password, Sha256Hash);
-
-            if (isValid)
+            if (UserService.AuthenticateUser(username, password))
             {
                 string role = UserService.GetRole(username);
                 Global.SetUserSession(Session, username, role);
@@ -45,16 +38,6 @@ namespace WebApplication1_Assignment5
             else
             {
                 Output.Text = "Invalid login";
-            }
-        }
-
-        // SHA-256 stand-in until the DLL is integrated — must match XmlUserStore's seed hash
-        private static string Sha256Hash(string input)
-        {
-            using (var sha = SHA256.Create())
-            {
-                byte[] bytes = sha.ComputeHash(Encoding.UTF8.GetBytes(input));
-                return BitConverter.ToString(bytes).Replace("-", "").ToLower();
             }
         }
     }

@@ -35,7 +35,7 @@ namespace WebApplication1_Assignment5
             application.UnLock();
         }
 
-        // Session helpers — use these on every page instead of hardcoding key strings
+        // Session helpers
         public static void SetUserSession(HttpSessionState session, string username, string role)
         {
             session["Username"] = username;
