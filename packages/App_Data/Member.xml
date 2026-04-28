@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<credentials>
+  <user>
+    <username>member1</username>
+    <password>abc123</password>
+  </user>
+  <user>
+    <username>Member2</username>
+    <password>abc123!</password>
+  </user>
+  <user>
+    <username>member3</username>
+    <password>abc456</password>
+  </user>
+  <user>
+    <username>member4</username>
+    <password>abc215</password>
+  </user>
+</credentials>
