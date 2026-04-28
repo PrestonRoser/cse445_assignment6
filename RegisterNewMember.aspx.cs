@@ -1,81 +1,41 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.Remoting.Messaging;
-using System.Web;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Xml;
+using CrimeRiskWeb.Services;
 
 namespace WebApplication1_Assignment5
 {
     public partial class RegisterNewMember : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
+        protected void Page_Load(object sender, EventArgs e) { }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
             string username = TextBox1.Text;
             string password = TextBox2.Text;
-            if(username == "" || password == "")
+
+            if (username == "" || password == "")
             {
                 Output.Text = "Please enter a username and password";
+                return;
+            }
 
-            }
-           bool flag = registerMember(username, password);
-            if(flag)
-            {
-                Output.Text = "Successfully registered member"; 
-            }
-            else
-            {
-                Output.Text = "Couldn't register member, member with this username already exists";
-            }
-            
+            // email is optional here — pass empty string until a field is added
+            bool success = UserService.RegisterUser(username, password, "Member", "", Sha256Hash);
+
+            Output.Text = success
+                ? "Successfully registered member"
+                : "Couldn't register member, member with this username already exists";
         }
 
-        bool registerMember(string username, string password)
+        private static string Sha256Hash(string input)
         {
-            string flocation = Path.Combine(Request.PhysicalApplicationPath, @"App_Data\Member.xml"); ;
-            if (File.Exists(flocation))  // check if file exists
+            using (var sha = SHA256.Create())
             {
-                XmlDocument xd = new XmlDocument(); // create new xml document
-                xd.Load(flocation); // loads xml document
-
-               
-
-
-                XmlNode node = xd; // create xml node
-                XmlNodeList children = node.ChildNodes; // get child nodes
-                XmlNode credentialsNode = children[1]; //
-                string duplicateCheck = $"user[username='{username}']"; // get username to check for duplicates                                 
-                XmlNode userNodeExists = credentialsNode.SelectSingleNode(duplicateCheck); 
-                if(userNodeExists != null)
-                {
-                    return false; // if user node exists return false
-                }
-                XmlNode userNode = xd.CreateElement("user");
-
-                XmlNode userNameNode = xd.CreateElement("username");
-                userNameNode.InnerText = username;
-
-                XmlNode passwordNode = xd.CreateElement("password");
-                passwordNode.InnerText = password;
-
-                userNode.AppendChild(userNameNode);
-                userNode.AppendChild(passwordNode);
-
-                credentialsNode.AppendChild(userNode);
-
-                xd.Save(flocation);
-
+                byte[] bytes = sha.ComputeHash(Encoding.UTF8.GetBytes(input));
+                return BitConverter.ToString(bytes).Replace("-", "").ToLower();
             }
-            return true; 
         }
-          
     }
 }
