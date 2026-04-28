@@ -427,6 +427,11 @@ FodyWeavers.xsd
 **/bin/
 **/obj/
 
+# Ensure App Data is not committed
+App_Data/Staff.xml
+App_Data/Users.xml
+App_Data/Member.xml
+
 # Ensure NuGet packages are not uploaded
 packages/
 **/packages/
