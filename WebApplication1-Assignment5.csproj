@@ -156,7 +156,7 @@
     <Content Include="ProtectedStaff\StaffPage.aspx" />
     <Content Include="ServiceTesting.aspx" />
     <Content Include="AccountManagement.aspx" />
-    <Content Include="WebUserControl1.aspx" />
+    <Content Include="WebUserControl1.ascx" />
     <None Include="Connected Services\ServiceReference1\Service1.wsdl" />
     <None Include="Connected Services\ServiceReference1\Service1.xsd">
       <SubType>Designer</SubType>
@@ -321,12 +321,12 @@
     <Compile Include="AccountManagement.aspx.designer.cs">
       <DependentUpon>AccountManagement.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebUserControl1.aspx.cs">
-      <DependentUpon>WebUserControl1.aspx</DependentUpon>
+    <Compile Include="WebUserControl1.ascx.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebUserControl1.aspx.designer.cs">
-      <DependentUpon>WebUserControl1.aspx</DependentUpon>
+    <Compile Include="WebUserControl1.ascx.designer.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
     </Compile>
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Services\XmlUserStore.cs" />
