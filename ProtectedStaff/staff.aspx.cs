@@ -15,17 +15,14 @@ namespace Police_Forensics_CSE445
         public void Session_start()
         {
             if (Global.GetSessionRole(Session) != "Staff")
-            {
                 Response.Redirect("~/Login.aspx");
-            }
+
             user_lb.Text = "Welcome Staff!";
         }
 
-        protected void logout_btn_Click(object sender, EventArgs e)
+        protected void account_btn_Click(object sender, EventArgs e)
         {
-            Global.ClearUserSession(Session);
-            FormsAuthentication.SignOut();
-            Response.Redirect("~/Default.aspx");
+            Response.Redirect("~/AccountManagement.aspx");
         }
 
         protected void criminalman_btn_Click(object sender, EventArgs e)
@@ -36,6 +33,13 @@ namespace Police_Forensics_CSE445
         protected void file_btn_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/File-analysis.aspx");
+        }
+
+        protected void logout_btn_Click(object sender, EventArgs e)
+        {
+            Global.ClearUserSession(Session);
+            FormsAuthentication.SignOut();
+            Response.Redirect("~/Default.aspx");
         }
     }
 }

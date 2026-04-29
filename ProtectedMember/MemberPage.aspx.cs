@@ -14,16 +14,21 @@ namespace WebApplication1_Assignment5
             user_lb.Text = "Welcome Member!";
         }
 
-        protected void logout_btn_Click(object sender, EventArgs e)
+        protected void account_btn_Click(object sender, EventArgs e)
         {
-            Global.ClearUserSession(Session);
-            FormsAuthentication.SignOut();
-            Response.Redirect("~/Default.aspx");
+            Response.Redirect("~/AccountManagement.aspx");
         }
 
         protected void criminal_btn_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Criminal_database.aspx");
+        }
+
+        protected void logout_btn_Click(object sender, EventArgs e)
+        {
+            Global.ClearUserSession(Session);
+            FormsAuthentication.SignOut();
+            Response.Redirect("~/Default.aspx");
         }
     }
 }
