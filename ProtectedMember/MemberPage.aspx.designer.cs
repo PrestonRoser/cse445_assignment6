@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Police_Forensics_CSE445
+namespace WebApplication1_Assignment5
 {
 
 
-    public partial class WebForm4
+    public partial class MemberPage
     {
 
         /// <summary>
@@ -33,22 +33,13 @@ namespace Police_Forensics_CSE445
         protected global::System.Web.UI.WebControls.Label user_lb;
 
         /// <summary>
-        /// Criminaldb_lb control.
+        /// criminal_btn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox Criminaldb_lb;
-
-        /// <summary>
-        /// Criminalinfo_label control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Criminalinfo_label;
+        protected global::System.Web.UI.WebControls.Button criminal_btn;
 
         /// <summary>
         /// logout_btn control.

@@ -7,9 +7,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using WebApplication1_Assignment5;
 
-namespace Police_Forensics_CSE445
+namespace WebApplication1_Assignment5
 {
-    public partial class WebForm4 : System.Web.UI.Page
+    public partial class MemberPage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -63,6 +63,11 @@ namespace Police_Forensics_CSE445
             Global.ClearUserSession(Session);
             FormsAuthentication.SignOut();
             Response.Redirect("~/Default.aspx");
+        }
+
+        protected void criminal_btn_Click(object sender, EventArgs e)
+        {
+              Response.Redirect("~/Criminal_database.aspx");
         }
     }
 }
