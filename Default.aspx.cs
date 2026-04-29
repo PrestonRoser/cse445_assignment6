@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ServiceModel.Security;
 using System.Web.Security;
 using System.Web.UI;
 
@@ -10,9 +11,10 @@ namespace WebApplication1_Assignment5
 
         protected void staffbutton_Click(object sender, EventArgs e)
         {
-            Session["GoToPage"] = "ProtectedStaff/StaffPage.aspx";
+            Session["GoToPage"] = "ProtectedStaff/staff.aspx";
             Session["UserType"] = "Staff";
-            Response.Redirect("ProtectedStaff/StaffPage.aspx");
+            
+            Response.Redirect("ProtectedStaff/staff.aspx");
         }
 
         protected void memberButton_Click(object sender, EventArgs e)

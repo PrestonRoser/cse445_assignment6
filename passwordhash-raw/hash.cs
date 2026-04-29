@@ -22,8 +22,8 @@ namespace hashpassword
             var sha256 = SHA256.Create();
             byte[] hash = sha256.ComputeHash(passwordbyte);
 
-            //converting to base64 string for storage could use hex 
-            return Convert.ToBase64String(hash);
+            //converting to hex string for storage
+            return BitConverter.ToString(hash).Replace("-", "").ToLower();
             
         }
         public static bool hashcompare(string password, string hash)

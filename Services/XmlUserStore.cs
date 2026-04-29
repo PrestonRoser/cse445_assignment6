@@ -37,7 +37,7 @@ namespace CrimeRiskWeb.Services
             {
                 // Seed the TA credential through HashUtility so seeding stays
                 // consistent with login hashing whether SHA-256 or DLL.
-                string taHash = HashUtility.HashPassword("Cse445!");
+                string taHash = hashpassword.hash.createpwdhash("Cse445!");
                 XDocument doc = new XDocument(
                     new XElement("Users",
                         BuildUserElement("TA", taHash, "Staff", "ta@asu.edu")

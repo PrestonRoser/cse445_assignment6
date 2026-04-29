@@ -1,6 +1,8 @@
 using System;
 using System.Xml.Linq;
 
+
+
 namespace CrimeRiskWeb.Services
 {
     // Account management API. Pages call this — never XmlUserStore directly.
@@ -19,7 +21,7 @@ namespace CrimeRiskWeb.Services
                 if (XmlUserStore.UsernameExists(username))
                     return false;
 
-                string hash = HashUtility.HashPassword(plaintextPassword);
+                string hash = hashpassword.hash.createpwdhash(plaintextPassword);
                 XmlUserStore.AddUser(username, hash, role, email);
                 return true;
             }
@@ -28,12 +30,12 @@ namespace CrimeRiskWeb.Services
                 return false;
             }
         }
-
+        
         public static bool AuthenticateUser(string username, string plaintextPassword)
         {
             try
             {
-                string attempt = HashUtility.HashPassword(plaintextPassword);
+                string attempt = hashpassword.hash.createpwdhash(plaintextPassword);
 
                 XElement user = XmlUserStore.FindUser(XmlUserStore.UsersFilePath, username)
                              ?? XmlUserStore.FindUser(XmlUserStore.StaffFilePath, username);
@@ -71,7 +73,7 @@ namespace CrimeRiskWeb.Services
         {
             try
             {
-                string newHash = HashUtility.HashPassword(newPlaintextPassword);
+                string newHash = hashpassword.hash.createpwdhash(newPlaintextPassword);
                 return XmlUserStore.UpdatePassword(username, newHash);
             }
             catch
