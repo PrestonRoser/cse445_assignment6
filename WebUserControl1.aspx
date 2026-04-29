@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebUserControl1.ascx.cs" Inherits="WebApplication1_Assignment5.WebUserControl1" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebUserControl1.aspx.cs" Inherits="WebApplication1_Assignment5.WebUserControl1" %>
 <div>
 <asp:Label ID="Label1" runat="server" Text="Username"></asp:Label>
 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>

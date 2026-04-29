@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Web.UI;
 using CrimeRiskWeb.Services;
 
@@ -19,8 +19,8 @@ namespace WebApplication1_Assignment5
             {
                 string username = Session["Username"].ToString();
                 UsernameLabel.Text = username;
-                RoleLabel.Text     = Global.GetSessionRole(Session);
-                EmailBox.Text      = UserService.GetUserEmail(username);
+                RoleLabel.Text = Global.GetSessionRole(Session);
+                EmailBox.Text = UserService.GetUserEmail(username);
             }
         }
 
@@ -41,10 +41,10 @@ namespace WebApplication1_Assignment5
 
         protected void SavePasswordBtn_Click(object sender, EventArgs e)
         {
-            string username    = Session["Username"].ToString();
+            string username = Session["Username"].ToString();
             string oldPassword = OldPasswordBox.Text;
             string newPassword = NewPasswordBox.Text;
-            string confirm     = ConfirmPasswordBox.Text;
+            string confirm = ConfirmPasswordBox.Text;
 
             if (string.IsNullOrEmpty(oldPassword) ||
                 string.IsNullOrEmpty(newPassword) ||
