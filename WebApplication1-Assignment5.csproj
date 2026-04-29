@@ -318,9 +318,6 @@
       <DependentUpon>WebUserControl1.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AccountManagement.aspx.designer.cs">
-      <DependentUpon>AccountManagement.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Services\XmlUserStore.cs" />
     <Compile Include="Services\HashUtility.cs" />
