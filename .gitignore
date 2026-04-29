@@ -424,7 +424,6 @@ FodyWeavers.xsd
 *.env
 
 # Ensure build output is ignored across all projects
-**/bin/
 **/obj/
 
 # Ensure App Data is not committed
