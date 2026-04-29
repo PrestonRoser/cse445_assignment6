@@ -126,6 +126,24 @@
                          <asp:TableCell>File: RegisterNewMember.aspx.cs</asp:TableCell>
                          <asp:TableCell><a href="Default" target="_blank">Click register member button on Default.aspx to go to RegisterNewMember page</a></asp:TableCell>
                     </asp:TableRow>
+               <asp:TableRow>
+                        <asp:TableCell>Andrew</asp:TableCell>
+                        <asp:TableCell>Criminal Database</asp:TableCell>
+                        <asp:TableCell>Click register member button which redirects to RegisterNewMember page. In this page, member can enter user id, password,
+                            and register. This creates an entry in the App_Data/Member.xml file.
+                        </asp:TableCell>
+                        <asp:TableCell>File: RegisterNewMember.aspx.cs</asp:TableCell>
+                        <asp:TableCell><a href="Default" target="_blank">Click register member button on Default.aspx to go to RegisterNewMember page</a></asp:TableCell>
+                    </asp:TableRow>
+               <asp:TableRow>
+                        <asp:TableCell>Andrew</asp:TableCell>
+                        <asp:TableCell>File Analysis</asp:TableCell>
+                        <asp:TableCell>Click File Analysis button to go to File Analysis page. In this page a user can upload a file and click scan file button to check to see if the file contains any malicious content.
+                            The hash is checked against a list of known malicious file hashes, however if the file hasn't been hashed before the api wont work. This is a limitation of the free api that we used for this project.
+                        </asp:TableCell>
+                        <asp:TableCell>File: File-Analysis.aspx.cs</asp:TableCell>
+                        <asp:TableCell><a href="/ProtectedStaff/File-analysis.aspx" target="_blank">Click File Analysis button on Default.aspx to go to File-analysis page</a></asp:TableCell>
+                    </asp:TableRow>
 
            </asp:Table>
        </div>
