@@ -1,8 +1,6 @@
 using System;
 using System.Xml.Linq;
 
-
-
 namespace CrimeRiskWeb.Services
 {
     // Account management API. Pages call this — never XmlUserStore directly.
@@ -68,11 +66,39 @@ namespace CrimeRiskWeb.Services
             }
         }
 
-        // Returns true only if the user was found and the password was actually updated.
-        public static bool UpdatePassword(string username, string newPlaintextPassword)
+        public static string GetUserEmail(string username)
         {
             try
             {
+                return XmlUserStore.GetUserEmail(username);
+            }
+            catch
+            {
+                return "";
+            }
+        }
+
+        public static bool UpdateEmail(string username, string newEmail)
+        {
+            try
+            {
+                return XmlUserStore.UpdateEmail(username, newEmail);
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        // Verifies old password before allowing update.
+        public static bool UpdatePassword(string username, string oldPlaintextPassword,
+                                        string newPlaintextPassword)
+        {
+            try
+            {
+                if (!AuthenticateUser(username, oldPlaintextPassword))
+                    return false;
+
                 string newHash = hashpassword.hash.createpwdhash(newPlaintextPassword);
                 return XmlUserStore.UpdatePassword(username, newHash);
             }

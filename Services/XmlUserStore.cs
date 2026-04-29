@@ -111,6 +111,37 @@ namespace CrimeRiskWeb.Services
             }
         }
 
+        // Updates email for member accounts in Users.xml.
+        public static bool UpdateEmail(string username, string newEmail)
+        {
+            string filePath = MapPath(UsersPath);
+            lock (_fileLock)
+            {
+                XDocument doc = XDocument.Load(filePath);
+                XElement user = doc.Root
+                    .Elements("User")
+                    .FirstOrDefault(u => string.Equals(
+                        (string)u.Element("Username"),
+                        username,
+                        StringComparison.OrdinalIgnoreCase));
+
+                if (user == null) return false;
+
+                user.Element("Email").Value = newEmail;
+                doc.Save(filePath);
+                return true;
+            }
+        }
+
+        // Returns the email for a given username, or empty string if not found.
+        public static string GetUserEmail(string username)
+        {
+            XElement user = FindUser(MapPath(UsersPath), username)
+                        ?? FindUser(MapPath(StaffPath), username);
+
+            return user != null ? (string)user.Element("Email") ?? "" : "";
+        }
+
         public static bool UsernameExists(string username)
         {
             return FindUser(MapPath(UsersPath), username) != null
