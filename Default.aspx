@@ -22,6 +22,8 @@
 
             <asp:Button CssClass="btn btn-primary btn-md" ID="CriminalDatabasebtn" runat="server" Text="Criminal Database" Style="margin-right: 10px;" OnClick="CriminaldatabaseButton_Click" />
 
+            <asp:Button CssClass="btn btn-primary btn-md" ID="FileAnalysisbtn" runat="server" Text="File Analysis" Style="margin-right: 10px;" OnClick="FileAnalysisButton_Click" />
+
         </div>
         <div>
             

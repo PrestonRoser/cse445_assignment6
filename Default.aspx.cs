@@ -43,5 +43,11 @@ namespace WebApplication1_Assignment5
         {
             Response.Redirect("~/Criminal_database.aspx");
         }
+        protected void FileAnalysisButton_Click(object sender, EventArgs e)
+        {
+            Session["GoToPage"] = "ProtectedStaff/staff.aspx";
+            Session["UserType"] = "Staff";
+            Response.Redirect("ProtectedStaff/File-Analysis.aspx");
+        }
     }
 }
