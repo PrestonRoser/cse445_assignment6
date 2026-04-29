@@ -16,7 +16,6 @@
                 OnSelectedIndexChanged="selected_criminal">
 
             </asp:ListBox>
-            <asp:Label ID="count_lb" runat="server" Text="Criminal Booking Count"></asp:Label>
         </div>
         <p>
             <asp:Label ID="Criminalinfo_label" runat="server" Text="Criminal History"></asp:Label>

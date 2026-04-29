@@ -45,6 +45,7 @@ namespace WebApplication1_Assignment5
 
         public static void ExecutedCriminal(HttpSessionState session, string CriminalName)
         {
+            
             var jail_list = GetCriminals(session);
             for (int j = 0; j < jail_list.Count; j++)
             {
@@ -74,23 +75,27 @@ namespace WebApplication1_Assignment5
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            bool isStaff = Session["Role"] != null && Session["Role"].ToString() == "Staff";
             // Add defaults only if session is fresh
             CriminalDataBase.AddDefaultCriminals(Session);
 
             if (!IsPostBack)
+            {
                 RefreshList();
+            }
 
             // null check for Application state
             if (Application["WebsiteStartTime"] != null)
             {
                 DateTime session_start = (DateTime)Application["WebsiteStartTime"];
-                session_lb.Text = "Session Start Time: " + session_start.ToString("MM/dd hh:mm tt");
+                
             }
+            session_lb.Text = "Current Start Time: " + DateTime.Now.ToString("MM/dd hh:mm tt");
 
-            // null check for TotalCriminalsAdded
-            if (Application["TotalCriminalsAdded"] == null)
-                Application["TotalCriminalsAdded"] = 0;
-            count_lb.Text = "Total Criminals Booked: " + Application["TotalCriminalsAdded"].ToString();
+            
+            addcriminal_btn.Visible = isStaff;
+            release_btn.Visible = isStaff;
+
         }
 
         public void RefreshList()
@@ -124,16 +129,13 @@ namespace WebApplication1_Assignment5
 
         protected void addcriminal_btn_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(name_tb.Text) &&
-                !string.IsNullOrEmpty(crime_tb.Text) &&
-                !string.IsNullOrEmpty(state_tb.Text))
+            if (!string.IsNullOrEmpty(name_tb.Text) && !string.IsNullOrEmpty(crime_tb.Text) && !string.IsNullOrEmpty(state_tb.Text))
             {
                 CriminalDataBase.AddCriminal(Session, new Criminal_Scum(name_tb.Text, crime_tb.Text, state_tb.Text));
                 ClearText();
                 RefreshList();
 
-                Application["TotalCriminalsAdded"] = (int)Application["TotalCriminalsAdded"] + 1;
-                count_lb.Text = "Total Criminals Booked: " + Application["TotalCriminalsAdded"].ToString();
+                
             }
         }
 

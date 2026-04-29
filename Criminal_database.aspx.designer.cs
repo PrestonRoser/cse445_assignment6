@@ -33,15 +33,6 @@ namespace WebApplication1_Assignment5
         protected global::System.Web.UI.WebControls.ListBox Criminaldb_lb;
 
         /// <summary>
-        /// count_lb control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label count_lb;
-
-        /// <summary>
         /// Criminalinfo_label control.
         /// </summary>
         /// <remarks>
