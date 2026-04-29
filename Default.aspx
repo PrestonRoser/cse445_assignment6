@@ -131,7 +131,7 @@
                         <asp:TableCell>Criminal Database</asp:TableCell>
                         <asp:TableCell>Click to manage the criminal database. In this page a user can view the list of criminals and add new criminals to the database.
                         </asp:TableCell>
-                        <asp:TableCell>File: RegisterNewMember.aspx.cs</asp:TableCell>
+                        <asp:TableCell>File: Criminal_database.aspx.cs</asp:TableCell>
                         <asp:TableCell><a href="Default" target="_blank">Click Criminal Database button on Default.aspx to go to Criminal Database page</a></asp:TableCell>
                     </asp:TableRow>
                <asp:TableRow>
