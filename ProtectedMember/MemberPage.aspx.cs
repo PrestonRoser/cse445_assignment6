@@ -11,7 +11,7 @@ namespace WebApplication1_Assignment5
             if (Global.GetSessionRole(Session) != "Member")
                 Response.Redirect("~/Login.aspx");
 
-            user_lb.Text = "Welcome Member!";
+            
         }
 
         protected void account_btn_Click(object sender, EventArgs e)

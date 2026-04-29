@@ -10,10 +10,8 @@
     <form id="form1" runat="server">
         <div>
             <h1>Member Page</h1>
-           
+           <% Response.Write("Hello " + Context.User.Identity.Name + ", "); %>
         <div>
-            <asp:Label ID="user_lb" runat="server" Font-Bold="True" Font-Size="Larger"
-                Height="53px" Text="Welcome user!" Width="233px" />
         </div>
         <p>You can view all criminals checked in but you can't check in others,
            or remove them unless you're a staff member</p>

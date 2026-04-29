@@ -10,12 +10,13 @@
     <form id="form1" runat="server">
         <div>
             <h1>Staff Page</h1>
+            <% Response.Write("Hello " + Context.User.Identity.Name + ", "); %>
+
         </div>
         <div>
-            <asp:Label ID="user_lb" runat="server" Font-Bold="True" Font-Size="Larger"
-                Height="53px" Text="Welcome user!" Width="233px" />
         </div>
-        <p>You can view all criminals checked in and modify the list of criminals</p>
+        
+        
         <br />
         <p>
             <asp:Button ID="criminalman_btn" runat="server"

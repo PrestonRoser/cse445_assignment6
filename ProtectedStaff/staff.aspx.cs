@@ -17,7 +17,7 @@ namespace Police_Forensics_CSE445
             if (Global.GetSessionRole(Session) != "Staff")
                 Response.Redirect("~/Login.aspx");
 
-            user_lb.Text = "Welcome Staff!";
+            
         }
 
         protected void account_btn_Click(object sender, EventArgs e)
