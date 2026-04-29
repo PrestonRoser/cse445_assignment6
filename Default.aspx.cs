@@ -13,7 +13,6 @@ namespace WebApplication1_Assignment5
         {
             Session["GoToPage"] = "ProtectedStaff/staff.aspx";
             Session["UserType"] = "Staff";
-            
             Response.Redirect("ProtectedStaff/staff.aspx");
         }
 
@@ -39,6 +38,10 @@ namespace WebApplication1_Assignment5
         protected void RegisterMemberButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("RegisterNewMember.aspx");
+        }
+        protected void CriminaldatabaseButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Criminal_database.aspx");
         }
     }
 }

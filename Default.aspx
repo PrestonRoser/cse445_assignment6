@@ -20,6 +20,8 @@
              <asp:Button CssClass="btn btn-primary btn-md" ID="LogoutBtn" runat="server" Text="Logout" Style="margin-right: 10px;" OnClick="LogoutButton_Click" />
             <asp:Button CssClass="btn btn-primary btn-md" ID="RegisterMemberBtn" runat="server" Text="Register Member" Style="margin-right: 10px;" OnClick="RegisterMemberButton_Click" />
 
+            <asp:Button CssClass="btn btn-primary btn-md" ID="CriminalDatabasebtn" runat="server" Text="Criminal Database" Style="margin-right: 10px;" OnClick="CriminaldatabaseButton_Click" />
+
         </div>
         <div>
             

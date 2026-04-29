@@ -60,6 +60,15 @@ namespace WebApplication1_Assignment5
         protected global::System.Web.UI.WebControls.Button RegisterMemberBtn;
 
         /// <summary>
+        /// CriminalDatabasebtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CriminalDatabasebtn;
+
+        /// <summary>
         /// Table1 control.
         /// </summary>
         /// <remarks>
