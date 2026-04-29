@@ -11,7 +11,7 @@ namespace Police_Forensics_CSE445
 {
 
 
-    public partial class WebForm4
+    public partial class WebForm3
     {
 
         /// <summary>
@@ -24,39 +24,66 @@ namespace Police_Forensics_CSE445
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// user_lb control.
+        /// fileupload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label user_lb;
+        protected global::System.Web.UI.WebControls.FileUpload fileupload;
 
         /// <summary>
-        /// Criminaldb_lb control.
+        /// scancount_lb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox Criminaldb_lb;
+        protected global::System.Web.UI.WebControls.Label scancount_lb;
 
         /// <summary>
-        /// Criminalinfo_label control.
+        /// scan_btn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Criminalinfo_label;
+        protected global::System.Web.UI.WebControls.Button scan_btn;
 
         /// <summary>
-        /// logout_btn control.
+        /// results_lb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button logout_btn;
+        protected global::System.Web.UI.WebControls.Label results_lb;
+
+        /// <summary>
+        /// criminalman_btn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button criminalman_btn;
+
+        /// <summary>
+        /// home_btn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button home_btn;
+
+        /// <summary>
+        /// session_lb control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label session_lb;
     }
 }

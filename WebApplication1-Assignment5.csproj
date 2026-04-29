@@ -136,6 +136,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
+    <Content Include="ProtectedStaff\File-analysis.aspx" />
     <Content Include="ProtectedStaff\staff.aspx" />
     <Content Include="RegisterNewMember.aspx" />
     <Content Include="ProtectedMember\MemberPage.aspx" />
@@ -239,6 +240,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProtectedStaff\File-analysis.aspx.cs">
+      <DependentUpon>File-analysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProtectedStaff\File-analysis.aspx.designer.cs">
+      <DependentUpon>File-analysis.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ProtectedStaff\staff.aspx.cs">
       <DependentUpon>staff.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

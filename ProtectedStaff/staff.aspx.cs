@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using WebApplication1_Assignment5;
@@ -21,15 +22,16 @@ namespace Police_Forensics_CSE445
             if (Session["UserType"] == null || Session["UserType"].ToString() != "Staff")
             {
                 //Might need to change this to the correct name if the page is different
-                Response.Redirect("~/Login.aspx");
+                Response.Redirect("~/Default.aspx");
             }
-            user_lb.Text = "Welcome " + Session["Username"].ToString() + "!";
+            user_lb.Text = "Welcome " + "Staff!";
         }
         protected void logout_btn_Click(object sender, EventArgs e)
         {
             //leaving session and redirecting to login page
             Global.ClearUserSession(Session);
-            Response.Redirect("~/Login.aspx");
+            FormsAuthentication.SignOut();
+            Response.Redirect("~/Default.aspx");
         }
 
         protected void criminalman_btn_Click(object sender, EventArgs e)
