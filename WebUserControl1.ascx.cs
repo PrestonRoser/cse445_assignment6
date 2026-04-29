@@ -28,6 +28,8 @@ namespace WebApplication1_Assignment5
                 string userType = Session["UserType"] as string;
                 if (userType == "CookieTester")
                 {
+                    Session[userType + "username"] = TextBox1.Text;
+                    Session[userType + "password"] = TextBox2.Text;
                     Response.Redirect("~/CookieTestingPage.aspx");
                 }
                 else
