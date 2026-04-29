@@ -129,11 +129,10 @@
                <asp:TableRow>
                         <asp:TableCell>Andrew</asp:TableCell>
                         <asp:TableCell>Criminal Database</asp:TableCell>
-                        <asp:TableCell>Click register member button which redirects to RegisterNewMember page. In this page, member can enter user id, password,
-                            and register. This creates an entry in the App_Data/Member.xml file.
+                        <asp:TableCell>Click to manage the criminal database. In this page a user can view the list of criminals and add new criminals to the database.
                         </asp:TableCell>
                         <asp:TableCell>File: RegisterNewMember.aspx.cs</asp:TableCell>
-                        <asp:TableCell><a href="Default" target="_blank">Click register member button on Default.aspx to go to RegisterNewMember page</a></asp:TableCell>
+                        <asp:TableCell><a href="Default" target="_blank">Click Criminal Database button on Default.aspx to go to Criminal Database page</a></asp:TableCell>
                     </asp:TableRow>
                <asp:TableRow>
                         <asp:TableCell>Andrew</asp:TableCell>

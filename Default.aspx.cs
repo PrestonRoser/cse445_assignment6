@@ -45,7 +45,7 @@ namespace WebApplication1_Assignment5
         }
         protected void FileAnalysisButton_Click(object sender, EventArgs e)
         {
-            Session["GoToPage"] = "ProtectedStaff/staff.aspx";
+            Session["GoToPage"] = "ProtectedStaff/File-Analysis.aspx";
             Session["UserType"] = "Staff";
             Response.Redirect("ProtectedStaff/File-Analysis.aspx");
         }
