@@ -36,7 +36,7 @@ namespace Police_Forensics_CSE445
 
         protected void criminalman_btn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Criminal_database.aspx");
+            Response.Redirect("~/Criminal_database.aspx");
             
         }
 

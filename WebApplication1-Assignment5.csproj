@@ -132,6 +132,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="CookieTestingPage.aspx" />
+    <Content Include="Criminal_database.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -220,6 +221,12 @@
     </Compile>
     <Compile Include="CookieTestingPage.aspx.designer.cs">
       <DependentUpon>CookieTestingPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criminal_database.aspx.cs">
+      <DependentUpon>Criminal_database.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Criminal_database.aspx.designer.cs">
+      <DependentUpon>Criminal_database.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

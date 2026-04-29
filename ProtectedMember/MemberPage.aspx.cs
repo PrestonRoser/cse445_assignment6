@@ -18,7 +18,7 @@ namespace Police_Forensics_CSE445
                 //RefreshList();
             }
 
-            user_lb.Text = "Welcome " + Session["Member"].ToString() + "!";
+            user_lb.Text = "Welcome " + "Member!";
 
 
             //Session_start();
@@ -50,7 +50,7 @@ namespace Police_Forensics_CSE445
                 //Might need to change this to the correct name if the page is different
                 Response.Redirect("~/Default.aspx");
             }
-            user_lb.Text = "Welcome " +  "Member!";
+            
         }
         public void RefreshList()
         {
